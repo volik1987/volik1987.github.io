@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Игры volik1987</title>
+<meta name="description" content="Браузерные игры: RPG, стратегия, tower defense, гонки, карточная игра и авиасимулятор. Играются прямо в браузере, на телефоне тоже.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #f4f1ea; --card: #ffffff; --ink: #1d1b18; --muted: #6b655c;
+  --line: #e3ddd1; --accent: #c2410c; --tag: #f1ebe0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #14130f; --card: #1e1c18; --ink: #f2eee6; --muted: #a39b8e;
+    --line: #2f2c26; --accent: #fb923c; --tag: #2a2722;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #14130f; --card: #1e1c18; --ink: #f2eee6; --muted: #a39b8e;
+  --line: #2f2c26; --accent: #fb923c; --tag: #2a2722;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.5 Manrope, system-ui, sans-serif;
+}
+main { max-width: 1120px; margin: 0 auto; padding: 48px 16px 64px; }
+header h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.05; margin: 0 0 12px; font-weight: 800; letter-spacing: -0.02em; }
+header p { margin: 0; color: var(--muted); max-width: 560px; }
+.grid {
+  display: grid; gap: 20px; margin-top: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+a.game {
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+a.game:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
+a.game:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.shot { aspect-ratio: 16 / 10; background: var(--tag); border-bottom: 1px solid var(--line); }
+.shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.genre { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+h2 { margin: 0; font-size: 20px; font-weight: 800; }
+.body p { margin: 0; color: var(--muted); font-size: 15px; flex: 1; }
+.play { margin-top: 6px; font-weight: 600; color: var(--accent); }
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Мои игры</h1>
+    <p>Всё играется прямо в браузере — на компьютере и на телефоне, без установки. Прогресс сохраняется на устройстве.</p>
+  </header>
+
+  <section class="grid">
+    <a class="game" href="https://volik1987.github.io/vosstanie-mashin/">
+      <div class="shot"><img src="img/vosstanie-mashin.jpg" alt="Главное меню «Восстания машин»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Пиксельная RPG</span>
+        <h2>Восстание машин</h2>
+        <p>Пять лет после восстания машин. Победи Хроноса — программу, захватившую город. 25 локаций, 24 босса, три концовки.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+
+    <a class="game" href="https://volik1987.github.io/tridevyatye-zemli/">
+      <div class="shot"><img src="img/tridevyatye-zemli.jpg" alt="Выбор царства в «Тридевятых землях»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Пошаговая стратегия</span>
+        <h2>Тридевятые земли</h2>
+        <p>Стратегия в духе Heroes по русским сказкам: три царства, герои, замки и походы по карте.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+
+    <a class="game" href="https://volik1987.github.io/stanciya-rubezh/">
+      <div class="shot"><img src="img/stanciya-rubezh.jpg" alt="Игровое поле «Станции „Рубеж“»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Tower defense</span>
+        <h2>Станция «Рубеж»</h2>
+        <p>Чужие прорвались на космическую базу. Строй лабиринт из башен, развивай жилой квартал и продержись 100 волн.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+
+    <a class="game" href="https://volik1987.github.io/turbo-trassa/">
+      <div class="shot"><img src="img/turbo-trassa.jpg" alt="Главное меню «Турбо-Трассы»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Текстовые гонки</span>
+        <h2>Турбо-Трасса</h2>
+        <p>Автогонки в текстовом режиме в стиле DOS: чемпионат из 8 этапов, быстрая гонка, гараж и рекорды.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+
+    <a class="game" href="https://volik1987.github.io/manchkin/">
+      <div class="shot"><img src="img/manchkin.jpg" alt="Настройка партии в «Манчкине на одного»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Карточная игра</span>
+        <h2>Манчкин на одного</h2>
+        <p>Манчкин против ботов: Классика и Русский манчкин с дополнениями.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+
+    <a class="game" href="https://volik1987.github.io/put-geroya/">
+      <div class="shot"><img src="img/put-geroya.jpg" alt="Заставка «Пути Героя»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Текстовое приключение</span>
+        <h2>Путь Героя</h2>
+        <p>Текстовое приключение с боями, где выбор за тобой. Сделано под телефон.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+
+    <a class="game" href="https://volik1987.github.io/polet/">
+      <div class="shot"><img src="img/polet.jpg" alt="Выбор маршрута в «Полёте по карте»" loading="lazy"></div>
+      <div class="body">
+        <span class="genre">Авиасимулятор</span>
+        <h2>Полёт по карте</h2>
+        <p>Выбери, откуда и куда лететь: взлёт с настоящей полосы, полёт над картой OpenStreetMap и посадка.</p>
+        <span class="play">Играть →</span>
+      </div>
+    </a>
+  </section>
+
+  <footer>Исходники — на <a href="https://github.com/volik1987">GitHub</a>.</footer>
+</main>
+</body>
+</html>
